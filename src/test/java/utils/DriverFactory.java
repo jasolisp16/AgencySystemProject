@@ -24,6 +24,33 @@ public class DriverFactory {
 		initialize();
 	}
 	
+	
+	
+	/**
+	 * @return the adminPage
+	 */
+	public static String getAdminPage() {
+		return adminPage;
+	}
+
+
+
+	/**
+	 * @return the userPage
+	 */
+	public static String getUserPage() {
+		return userPage;
+	}
+
+
+
+	/**
+	 * @return the supplierPage
+	 */
+	public static String getSupplierPage() {
+		return supplierPage;
+	}
+
 	public void initialize() {
 		if(Objects.equals(driver, null)) {
 			createNewDriverInstance();
