@@ -15,10 +15,11 @@ import utils.DriverFactory;
 public class StartingSteps {
 	
 	private WebDriver driver;
+	private DriverFactory df;
 	
 	@Before
 	public void beforeScenario() {
-		driver = new DriverFactory().getDriver();
+		driver = df.getDriver();
 	}
 	
 

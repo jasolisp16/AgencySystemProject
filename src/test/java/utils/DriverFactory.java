@@ -16,11 +16,41 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class DriverFactory {
 	
 	protected static WebDriver driver;
+	protected static String adminPage = "http://www.phptravels.net/admin";
+	protected static String userPage = "http://www.phptravels.net/";
+	protected static String supplierPage = "http://www.phptravels.net/supplier";
 	
 	public DriverFactory() {
 		initialize();
 	}
 	
+	
+	
+	/**
+	 * @return the adminPage
+	 */
+	public static String getAdminPage() {
+		return adminPage;
+	}
+
+
+
+	/**
+	 * @return the userPage
+	 */
+	public static String getUserPage() {
+		return userPage;
+	}
+
+
+
+	/**
+	 * @return the supplierPage
+	 */
+	public static String getSupplierPage() {
+		return supplierPage;
+	}
+
 	public void initialize() {
 		if(Objects.equals(driver, null)) {
 			createNewDriverInstance();
