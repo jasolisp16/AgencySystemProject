@@ -30,10 +30,10 @@ public class LandingPage {
 	@FindBy(xpath="/html/body/div[10]/div[1]/table/tbody/tr[2]/td[7]")
 	private WebElement dateout;
 	
-	@FindBy (xpath ="/html/body/div[5]/section/div[2]/div/div/div[2]/div/div[1]/form/div[5]/button")
-	private WebElement search1;
-	@FindBy (xpath="/html/body/div[5]/section/div[2]/div/div/div[2]/div/div[1]/form/div[5]/button")
-	private WebElement search2;
+	@FindBy (xpath ="/html/body/div[5]/section/div[2]/div/div/div[2]/div/div[1]/form/div[5]")
+	private WebElement search;
+	
+	
 	
 	 public LandingPage(WebDriver driver) {
 	        this.driver = driver;
@@ -43,13 +43,13 @@ public class LandingPage {
 	public void click_To_UserLogin() throws Throwable{
 		myaccount.click();
 		login.click();
-		System.out.println("Login Exitoso");
+		
 	}
 	
 	public void input_city()throws Throwable{
 		hotelButton.click();
 		hotelin.sendKeys("Merida");
-		Thread.sleep(1200);
+		Thread.sleep(1150);
 		midhotel.click();
 	}
 
@@ -60,11 +60,11 @@ public class LandingPage {
 		
 		checkoutButton.click();
 		
-		dateout.click();
+		
 	}
 	
 	public void go_ToSearchHotel() throws Throwable{
-		search1.click();
-		search2.click();
+		Thread.sleep(1500);
+		search.click();
 	}
 }

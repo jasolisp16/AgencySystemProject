@@ -1,8 +1,6 @@
 package steps;
 
-import org.openqa.selenium.firefox.FirefoxDriver;
 
-import cucumber.api.java.Before;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import pages.LandingPage;
@@ -29,12 +27,12 @@ public class LandingPageStep extends DriverFactory {
 		new LandingPage(driver).input_city();
 	}
 
-	@And("^User picks check in date$")
+	@And("^User picks check in and check out date$")
 	public void sel_date() throws Throwable{
 		new LandingPage(driver).input_Date();
 	}
 	
-	@And("^$")
+	@And("^User searches hotel$")
 	public void search()throws Throwable{
 		new LandingPage(driver).go_ToSearchHotel();
 	}

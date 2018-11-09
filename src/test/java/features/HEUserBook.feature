@@ -12,10 +12,8 @@ Feature: User booking
   	Then User is redirected to userhomepage, clicks to hotel
   	
   	And User selects city
-  	And User picks check in date
-  	And User picks checkout date
-  	And User select amount of adults and childs
-  	And User searches hotels
+  	And User picks check in and check out date
+  	And User searches hotel
   	Then User is redirected to hotelSelectionPage
   	
   	And User selects availvable rooms
