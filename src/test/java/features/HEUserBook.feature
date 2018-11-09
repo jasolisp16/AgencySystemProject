@@ -16,7 +16,7 @@ Feature: User booking
   	Then User searches hotel and is redirected to hotel options
   	
   	And User selects hotel
-  	And User selects availvable rooms
+  	And User selects availvable room
   	Then User is redirected to confirmPage
   	
   	And User confirms booking

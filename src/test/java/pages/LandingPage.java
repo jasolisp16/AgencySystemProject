@@ -49,7 +49,7 @@ public class LandingPage {
 	public void input_city()throws Throwable{
 		hotelButton.click();
 		hotelin.sendKeys("Merida");
-		Thread.sleep(1150);
+		Thread.sleep(1490);
 		midhotel.click();
 	}
 
