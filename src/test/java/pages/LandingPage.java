@@ -55,16 +55,12 @@ public class LandingPage {
 
 	public void input_Date() throws Throwable{
 		checkinButton.click();
-		
 		datein.click();
-		
 		checkoutButton.click();
-		
-		
 	}
 	
 	public void go_ToSearchHotel() throws Throwable{
-		Thread.sleep(1500);
+		Thread.sleep(250);
 		search.click();
 	}
 }

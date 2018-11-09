@@ -3,6 +3,7 @@ package steps;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
 import pages.LandingPage;
 import utils.DriverFactory;
 
@@ -32,7 +33,7 @@ public class LandingPageStep extends DriverFactory {
 		new LandingPage(driver).input_Date();
 	}
 	
-	@And("^User searches hotel$")
+	@Then("^User searches hotel and is redirected to hotel options$")
 	public void search()throws Throwable{
 		new LandingPage(driver).go_ToSearchHotel();
 	}

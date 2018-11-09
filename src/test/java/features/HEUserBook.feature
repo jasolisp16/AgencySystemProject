@@ -13,9 +13,9 @@ Feature: User booking
   	
   	And User selects city
   	And User picks check in and check out date
-  	And User searches hotel
-  	Then User is redirected to hotelSelectionPage
+  	Then User searches hotel and is redirected to hotel options
   	
+  	And User selects hotel
   	And User selects availvable rooms
   	Then User is redirected to confirmPage
   	
