@@ -9,7 +9,7 @@ Feature: User booking
   	Given User enters to landingPage
   	And User access UserLogPage
   	And User enter with email as user@phptravels.com
-  	Then User is redirected to userpage, clicks to homePage
+  	Then User is redirected to userhomepage, clicks to hotel
   	
   	And User selects city
   	And User picks check in date

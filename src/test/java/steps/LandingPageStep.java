@@ -23,5 +23,19 @@ public class LandingPageStep extends DriverFactory {
 		new LandingPage(driver).click_To_UserLogin();
 	}
 	
+	@And("^User selects city$")
+	public void sel_city()throws Throwable{
+		Thread.sleep(2000);
+		new LandingPage(driver).input_city();
+	}
 
+	@And("^User picks check in date$")
+	public void sel_date() throws Throwable{
+		new LandingPage(driver).input_Date();
+	}
+	
+	@And("^$")
+	public void search()throws Throwable{
+		new LandingPage(driver).go_ToSearchHotel();
+	}
 }
