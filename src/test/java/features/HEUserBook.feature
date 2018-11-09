@@ -1,12 +1,14 @@
 #Author: mario.celis@4thsource.com
 
-@HEBok
+@HEBook
 Feature: User booking
   User logs in to book in a previously created hotel.
 
   @UserBookingHE
   Scenario: User with credentials attemps to book into a recently created hotel
-  	Given User enter with email as user@phptravels.com and password as demouser
+  	Given User enters to landingPage
+  	And User access UserLogPage
+  	And User enter with email as user@phptravels.com
   	Then User is redirected to userpage, clicks to homePage
   	
   	And User selects city
