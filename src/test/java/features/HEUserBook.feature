@@ -19,8 +19,7 @@ Feature: User booking
   	And User selects availvable room
   	Then User is redirected to confirmPage
   	
-  	And User confirms booking
-  	Then User is redirected to customer unpaidTicketPage
+  	Then User confirms booking
   	
   
 

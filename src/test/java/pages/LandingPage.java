@@ -23,9 +23,9 @@ public class LandingPage {
 	
 	@FindBy (xpath="/html/body/div[5]/section/div[2]/div/div/div[2]/div/div[1]/form/div[2]/div/input")
 	private WebElement checkinButton;
-	@FindBy (xpath="/html/body/div[9]/div[1]/table/tbody/tr[2]/td[6]")
+	@FindBy (xpath="/html/body/div[9]/div[1]/table/tbody/tr[5]/td[4]")
 	private WebElement datein;
-	@FindBy (xpath="/html/body/div[5]/section/div[2]/div/div/div[2]/div/div[1]/form/div[3]/div/input")
+	@FindBy (xpath="/html/body/div[10]/div[1]/table/tbody/tr[6]/td[6]")
 	private WebElement checkoutButton;
 	@FindBy(xpath="/html/body/div[10]/div[1]/table/tbody/tr[2]/td[7]")
 	private WebElement dateout;
