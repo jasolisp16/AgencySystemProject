@@ -9,20 +9,17 @@ Feature: User booking
   	Given User enters to landingPage
   	And User access UserLogPage
   	And User enter with email as user@phptravels.com
-  	Then User is redirected to userpage, clicks to homePage
+  	Then User is redirected to userhomepage, clicks to hotel
   	
   	And User selects city
-  	And User picks check in date
-  	And User picks checkout date
-  	And User select amount of adults and childs
-  	And User searches hotels
-  	Then User is redirected to hotelSelectionPage
+  	And User picks check in and check out date
+  	Then User searches hotel and is redirected to hotel options
   	
-  	And User selects availvable rooms
+  	And User selects hotel
+  	And User selects availvable room
   	Then User is redirected to confirmPage
   	
-  	And User confirms booking
-  	Then User is redirected to customer unpaidTicketPage
+  	Then User confirms booking
   	
   
 
