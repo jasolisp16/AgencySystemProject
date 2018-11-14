@@ -4,9 +4,7 @@
 package pages;
 
 import java.security.SecureRandom;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.Collections;
 import java.util.Date;
 import java.util.HashMap;
@@ -21,6 +19,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
+
+import utils.CommonUtils;
 
 /**
  * @author JoseAdrianSolisPerez
@@ -173,6 +173,7 @@ public class AddNewHotelPage {
 	}
 	
 	private void fillGeneralOptions() {
+		CommonUtils utilsDate = new CommonUtils();
 		Select hotelStaSel = new Select(hotelStatusSelect);
 		Select starSel = new Select(hotelStarsSelect);
 		Select typeHotelSel = new Select(hotelTypeSelect);
@@ -196,13 +197,13 @@ public class AddNewHotelPage {
 		if(!isFtSel.getOptions().isEmpty()) {
 			isFtSel.selectByIndex(0);
 		}
-		Date idate = getInitDate();
-		Date edate = getEndDate(idate);
+		Date idate = utilsDate.getRandomInitDate();
+		Date edate = utilsDate.getRandomEndDate(idate);
 		//System.out.println(convertDateToString(idate));
 		//System.out.println(convertDateToString(edate));
-		finputDate.sendKeys(convertDateToString(idate));
+		finputDate.sendKeys(utilsDate.convertDateToString(idate));
 		finputDate.click();
-		tinputDate.sendKeys(convertDateToString(edate));
+		tinputDate.sendKeys(utilsDate.convertDateToString(edate));
 		tinputDate.click();
 		bSearch.click();
 		inputSearch.sendKeys("Merida");
@@ -344,29 +345,6 @@ public class AddNewHotelPage {
 			}
 		}
 		
-	}
-	
-	private Date getInitDate() {
-		Random r = new Random();
-		Date today = Calendar.getInstance().getTime();
-		return addDays(today, r.nextInt(10));
-	}
-	
-	private Date getEndDate(Date iniDate) {
-		Random r = new Random();
-		return addDays(iniDate, r.nextInt(5)+1);		
-	}
-	
-	private Date addDays(Date date,int days) {
-		Calendar cal = Calendar.getInstance();
-		cal.setTime(date);
-		cal.add(Calendar.DATE, days);
-		return cal.getTime();
-	}
-	
-	private String convertDateToString(Date date) {
-		SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
-		return format.format(date);
 	}
 	
 	public String createRandomNumber(int size) {

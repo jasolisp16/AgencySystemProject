@@ -32,11 +32,12 @@ public class AdminHomePage {
 	
 	public void user_selects_rooms_option() throws Throwable {
 		hotelOpLi.click();
+		Thread.sleep(5000);
 		driver.findElement(By.cssSelector("a[href='https://www.phptravels.net/admin/hotels/rooms']")).click();
 	}
 	
 	public void admin_user_logs_out() throws Throwable {
-		driver.findElement(By.cssSelector("a[href='https://www.phptravels.net/admin/logout']")).click();	
+		driver.findElement(By.cssSelector("a[href='https://www.phptravels.net/admin/logout']")).click();
 	}
 
 }

@@ -121,7 +121,7 @@ public class AddNewRoomPage {
 		Random rq = new Random();
 		int qrooms = rq.nextInt(5) + 1;
 		quantityInput.sendKeys(String.valueOf(qrooms));
-		minStayInput.sendKeys("2");
+		minStayInput.sendKeys("1");
 		maxAdultsInput.sendKeys("4");
 		maxChildrenInput.sendKeys("2");
 		extraBedsInput.sendKeys("2");

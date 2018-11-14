@@ -3,6 +3,7 @@
  */
 package pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -26,6 +27,11 @@ public class HotelsManagementPage {
 	
 	public void user_select_add_hotel() throws Throwable {
 		addHotelButton.click();
+	}
+	
+	public boolean hotel_was_created() throws Throwable {
+		Thread.sleep(5000);
+		return driver.findElement(By.cssSelector("a[href='https://www.phptravels.net/admin/hotels/manage/4th-Source-Premier-Inn']")).isDisplayed();
 	}
 
 }
