@@ -26,6 +26,7 @@ public class UserLogPage {
 		Thread.sleep(250);
 		emailin.sendKeys(emailu);
 		passin.sendKeys("demouser");
+		Thread.sleep(500);
 		loginb.click();
 	}
 	
