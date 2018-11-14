@@ -26,7 +26,7 @@ public class HotelDetailsPage {
 	}
 
 	public void check_Box() throws Throwable{
-		Thread.sleep(200);
+		Thread.sleep(500);
 		je.executeScript("arguments[0].scrollIntoView()", checkbox);
 		Thread.sleep(500);
 	    checkbox.click();

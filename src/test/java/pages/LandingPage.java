@@ -79,7 +79,8 @@ public class LandingPage {
 		search.click();
 	}
 	
-	public void client_searchs_for_the_hotel() throws Throwable {
+
+  public void client_searchs_for_the_hotel() throws Throwable {
 		CommonUtils utilsDate = new CommonUtils();
 		hotelButton.click();
 		hotelin.sendKeys("4th Source");
