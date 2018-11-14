@@ -14,7 +14,10 @@ import cucumber.api.junit.Cucumber;
  */
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "src/test/java/features")
+@CucumberOptions(features = "src/test/java/features",
+		tags= {"@newHotel"},
+		plugin = {"pretty", "html:target/cucumber-reports", "json:target/cucumber-reports/Cucumber.json",
+				"junit:target/cucumber-reports/Cucumber.xml"})
 public class RunFeaturesTest {
 
 }

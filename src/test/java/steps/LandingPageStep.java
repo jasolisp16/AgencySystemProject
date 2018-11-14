@@ -4,6 +4,7 @@ package steps;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
 import pages.LandingPage;
 import utils.DriverFactory;
 
@@ -36,5 +37,18 @@ public class LandingPageStep extends DriverFactory {
 	@Then("^User searches hotel and is redirected to hotel options$")
 	public void search()throws Throwable{
 		new LandingPage(driver).go_ToSearchHotel();
+	}
+	
+	@And("^user visits landing page as a client$")
+	public void user_visits_landing_page_as_a_client() throws Throwable {
+		System.out.println("Openning new pages");
+		driver.get(userPage);
+		driver.manage().window().maximize();
+	}
+	
+	@When("^client searchs for the hotel$")
+	public void client_searchs_for_the_hotel() throws Throwable {
+		Thread.sleep(5000);
+		new LandingPage(driver).client_searchs_for_the_hotel();
 	}
 }

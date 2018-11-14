@@ -3,7 +3,6 @@ package pages;
 
 
 import org.openqa.selenium.JavascriptExecutor;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -30,10 +29,14 @@ public class HotelDetailsPage {
 		Thread.sleep(200);
 		je.executeScript("arguments[0].scrollIntoView()", checkbox);
 		Thread.sleep(500);
-	        checkbox.click();
+	    checkbox.click();
 	}
 	
 	public void go_confirm() throws Throwable{
 		booknow.click();
+	}
+	
+	public boolean hotel_is_visible_for_client() throws Throwable {
+		return booknow.isDisplayed();
 	}
 }

@@ -16,8 +16,8 @@
 #""
 ## (Comments)
 #Sample Feature Definition Template
-@tag
-Feature: 
+@CreateElements 
+Feature: Add new Element 
   As an admin user I want to be able to create a new Hotel
   so the hotel will be visible for client
   
@@ -28,7 +28,7 @@ Feature:
   	When user logs in
   	
 
-  @tag1
+  @newHotel
   Scenario: Create a new Hotel
     And user select the hotel tab
     And user select add hotel
@@ -39,6 +39,8 @@ Feature:
     And user fill contac info
     And user fill translate info
     And user submit hotel info
+    Then the hotel was created
+    
     And user select rooms option
     And user select add room
     And user fill room general info
