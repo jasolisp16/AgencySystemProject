@@ -23,8 +23,10 @@ public class UserLogPage {
     }
 
 	public void user_In(String emailu)throws Throwable{
+		Thread.sleep(250);
 		emailin.sendKeys(emailu);
 		passin.sendKeys("demouser");
+		Thread.sleep(500);
 		loginb.click();
 	}
 	
