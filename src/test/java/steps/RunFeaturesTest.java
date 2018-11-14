@@ -14,7 +14,7 @@ import cucumber.api.junit.Cucumber;
  */
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "src/test/java/features")
+@CucumberOptions(features = "src/test/java/features/", tags= {"@Test1,@Test2"})
 public class RunFeaturesTest {
 
 }
