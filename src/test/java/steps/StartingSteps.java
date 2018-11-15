@@ -1,4 +1,4 @@
-/**
+	/**
  * 
  */
 package steps;
@@ -19,6 +19,7 @@ public class StartingSteps {
 	
 	@Before
 	public void beforeScenario() {
+		df = new DriverFactory();
 		driver = df.getDriver();
 	}
 	
