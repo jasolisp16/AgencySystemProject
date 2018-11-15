@@ -23,9 +23,10 @@ Feature: User booking
   	And User applies cupon if available
   	Then User is redirected to confirmPage
   	
-  	Then User confirms booking
-  	
-  	
+  	And User confirms booking
+  	Then User goes to my account
+ 
+  	Then User should see hotel booking
   
   	
   

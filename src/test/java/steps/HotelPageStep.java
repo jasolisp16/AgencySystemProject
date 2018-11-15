@@ -17,4 +17,9 @@ public class HotelPageStep extends DriverFactory{
 	public void facilities()throws Throwable{
 		Assert.assertTrue(new HotelPage(driver).view_Facilities());
 	}
+	
+	@Then("^User views hotel$")
+	public void enter_Hotel()throws Throwable{
+		new HotelPage(driver).sel
+	}
 }
