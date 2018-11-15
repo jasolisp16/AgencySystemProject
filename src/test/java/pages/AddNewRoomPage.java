@@ -104,7 +104,7 @@ public class AddNewRoomPage {
 		roomTypeDiv.click();
 		//Select roomTypeSel = new Select(roomTypeSelect);
 		List<WebElement> roomTypeList = roomTypeSelect.findElements(By.tagName("li"));
-		System.out.println("Size: " + roomTypeList.size());
+		//System.out.println("Size: " + roomTypeList.size());
 		Random rrt = new Random();
 		int roomtype = rrt.nextInt(roomTypeList.size());
 		String tr = roomTypeList.get(roomtype).getText();

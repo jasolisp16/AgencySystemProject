@@ -1,6 +1,3 @@
-/**
- * 
- */
 package steps;
 
 import org.junit.runner.RunWith;

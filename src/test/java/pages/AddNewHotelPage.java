@@ -214,7 +214,6 @@ public class AddNewHotelPage {
 			e.printStackTrace();
 		}
 		List<WebElement> resultOptions = resultSearch.findElements(By.tagName("li"));
-		System.out.println(resultOptions.size());
 		if(!resultOptions.isEmpty()) {
 			Random ropt = new Random();
 			resultOptions.get(ropt.nextInt(resultOptions.size())).click();
@@ -252,7 +251,7 @@ public class AddNewHotelPage {
 		cOutTimeInputArea.sendKeys(Keys.TAB);
 		//payOptField.click();
 		Select paymentOptions = new Select(paymentOptionsInput);
-		System.out.println(paymentOptions.getOptions().size());
+		//System.out.println(paymentOptions.getOptions().size());
 		Random toptions = new Random();
 		int total = toptions.nextInt(paymentOptions.getOptions().size()) + 1;
 		do {
@@ -263,8 +262,8 @@ public class AddNewHotelPage {
 				e.printStackTrace();
 			}
 			//paymentOptions = new Select(paymentOptionsInput);
-			System.out.println("size: " + paymentOptions.getOptions().size());
-			System.out.println("total: " + total);
+			//System.out.println("size: " + paymentOptions.getOptions().size());
+			//System.out.println("total: " + total);
 			isSelected = true;
 			String text = "";
 			while(isSelected) {
@@ -282,7 +281,7 @@ public class AddNewHotelPage {
 					isSelected = true;
 				}
 			}
-			System.out.println(text);
+			//System.out.println(text);
 			payOptInputField.sendKeys(text);
 			payOptInputField.sendKeys(Keys.ENTER);
 			//paymentOptions.getOptions().remove(opt);

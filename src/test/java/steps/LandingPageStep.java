@@ -41,7 +41,7 @@ public class LandingPageStep extends DriverFactory {
 	
 	@And("^user visits landing page as a client$")
 	public void user_visits_landing_page_as_a_client() throws Throwable {
-		System.out.println("Openning new pages");
+		//System.out.println("Openning new pages");
 		driver.get(userPage);
 		driver.manage().window().maximize();
 	}
