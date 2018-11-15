@@ -12,7 +12,12 @@ public class UserConfirmBookStep extends DriverFactory {
 		new UserConfirmBookPage(driver).confirmbook();
 	}
 	
-	@And("^User applies cupon if available$")
+	@And("^User applies invalid cupon$")
+	public void apply_inCupon()throws Throwable{
+		new UserConfirmBookPage(driver).cupon_inCode();
+	}
+	
+	@And("^User applies validcupon$")
 	public void apply_Cupon()throws Throwable{
 		new UserConfirmBookPage(driver).cupon_Code();
 	}
