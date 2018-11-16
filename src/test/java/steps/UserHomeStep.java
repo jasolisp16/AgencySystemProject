@@ -29,8 +29,8 @@ public class UserHomeStep extends DriverFactory{
 		new UserHomePage(driver).check_Landing();
 		}
 	
-	//@Then("^User should see hotel booking$")
-//	public void check_booking()throws Throwable{
-	//	new  
-	//}
+	@Then("^User should see hotel booking$")
+	public void check_booking()throws Throwable{
+		new UserHomePage(driver).check_Book();  
+	}
 }

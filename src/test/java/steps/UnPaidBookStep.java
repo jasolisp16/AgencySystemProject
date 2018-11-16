@@ -18,7 +18,7 @@ public class UnPaidBookStep extends DriverFactory{
 		new UnpaidBookPage(driver).go_ToLanding();
 	}
 	
-	@And("^User should view ticket$")
+	@Then("^User should view ticket$")
 	private void view_Ticket() throws Throwable{
 		new UnpaidBookPage(driver).view_Ticket();
 	}
