@@ -117,9 +117,9 @@ public class AddNewRoomPage {
 		roomTypeInput.sendKeys(Keys.ENTER);
 		roomDescription.click();
 		driver.switchTo().activeElement().sendKeys("This is a room description");
-		basicPriceInput.sendKeys("200");
+		basicPriceInput.sendKeys("120");
 		Random rq = new Random();
-		int qrooms = rq.nextInt(5) + 1;
+		int qrooms = 1;//rq.nextInt(5) + 1;
 		quantityInput.sendKeys(String.valueOf(qrooms));
 		minStayInput.sendKeys("1");
 		maxAdultsInput.sendKeys("4");
@@ -177,5 +177,4 @@ public class AddNewRoomPage {
 			}
 		}
 	}
-
 }

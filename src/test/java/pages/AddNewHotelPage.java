@@ -79,6 +79,9 @@ public class AddNewHotelPage {
 	@FindBy(name = "taxvalue")
 	private WebElement taxValueTextBox;
 	
+	@FindBy(name = "hotelmapaddress")
+	private WebElement hotelMapAddressInput;
+	
 	//Facilities
 	
 	@FindBy(xpath = "/html/body/div[2]/div/div/form/div/div[1]/div/div[2]/div/div/div[1]/label/div")
@@ -228,6 +231,14 @@ public class AddNewHotelPage {
 			taxTypeSel.selectByIndex(rtax.nextInt(taxTypeSel.getOptions().size()));
 		}
 		taxValueTextBox.sendKeys("8");
+		
+		hotelMapAddressInput.sendKeys("4th Source - Merida");
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		hotelMapAddressInput.sendKeys(Keys.ENTER);
 	}
 	
 	private void fillFacilitiesOptions() {

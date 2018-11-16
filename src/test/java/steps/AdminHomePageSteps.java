@@ -38,7 +38,7 @@ public class AdminHomePageSteps extends DriverFactory {
 	@After
 	public void afterScenario() {
 		System.out.println("Mensaje del after!!");
-		destroyDriver();
+		//destroyDriver();
 	}
 
 }
