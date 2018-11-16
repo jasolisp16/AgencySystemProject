@@ -34,11 +34,11 @@ public class AdminHomePageSteps extends DriverFactory {
 		//Thread.sleep(1000);
 		//destroyDriver();
 	}
-	
-	//@After
-	//public void afterScenario() {
-		//System.out.println("Mensaje del after!!");
+  
+	@After
+	public void afterScenario() {
+		System.out.println("Mensaje del after!!");
 		//destroyDriver();
-	//}
+	}
 
 }
