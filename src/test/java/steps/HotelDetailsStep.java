@@ -15,7 +15,7 @@ public class HotelDetailsStep extends DriverFactory {
 		new HotelDetailsPage(driver).check_Box();
 	}
 	
-	@Then("^User is redirected to confirmPage$")
+	@And("^User is redirected to confirmPage$")
 	public void go_ToConfirm() throws Throwable{
 		new HotelDetailsPage(driver).go_confirm();
 		

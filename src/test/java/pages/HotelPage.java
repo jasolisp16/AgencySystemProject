@@ -31,8 +31,8 @@ public class HotelPage {
 		return driver.findElement(By.cssSelector("a[href='https://www.phptravels.net/hotels/detail/merida/4th-source-premier-inn']")).isDisplayed();
 	}
 	
-	public void view_Hotel()throws Throwable{
-		//assertelementpresent
+	public boolean view_Hotel()throws Throwable{
+		return driver.findElement(By.cssSelector("table.bgwhite > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(1) > div:nth-child(2) > div:nth-child(1) > h4:nth-child(1)")).isDisplayed();
 	}
 	public boolean view_Facilities()throws Throwable{
 		//verifyelementpresent
