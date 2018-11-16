@@ -13,9 +13,9 @@ public class UserConfirmBookPage {
 	
 	@FindBy(xpath="/html/body/div[5]/div[1]/div/div[1]/div/div[3]/button")
 	private WebElement confirmbook;
-	@FindBy(xpath="/html/body/div[5]/div[1]/div/div[1]/div/form/div[5]/div[2]/div[2]/div[2]/input")
+	@FindBy(xpath="/html/body/div[5]/div[1]/div/div[1]/div/form/div[3]/div[2]/div[2]/div[2]/input")
 	private WebElement ccode;
-	@FindBy(xpath="^/html/body/div[5]/div[1]/div/div[1]/div/form/div[5]/div[2]/div[2]/div[3]/span$")
+	@FindBy(xpath="/html/body/div[5]/div[1]/div/div[1]/div/form/div[3]/div[2]/div[2]/div[3]/span")
 	private WebElement acode;
 
 	
@@ -28,12 +28,22 @@ public class UserConfirmBookPage {
 		confirmbook.click();
 	}
 	
-	public void cupon_Code()throws Throwable{
+	public void cupon_inCode()throws Throwable{
+		Thread.sleep(1500);
 		ccode.sendKeys("4THSRC");
 		acode.click();
-		Thread.sleep(600);
+		Thread.sleep(5000);
 		Alert al = driver.switchTo().alert();
 		al.dismiss();
 	}
+	
+	
+	public void cupon_Code()throws Throwable{
+		Thread.sleep(1500);
+		ccode.sendKeys("4THSRC");
+		acode.click();
+	}
+	
+	
 
 }
