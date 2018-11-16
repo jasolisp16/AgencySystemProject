@@ -16,11 +16,6 @@ public class UnpaidBookPage {
 	@FindBy(xpath="/html/body/nav/div/div[2]/ul[1]/li[1]/a")
 	private WebElement landing;
 	
-	@FindBy (css= "")
-	private WebElement payarrival;
-	
-	
-	
 	
 	public UnpaidBookPage(WebDriver driver){
 		this.driver=driver;
@@ -34,7 +29,9 @@ public class UnpaidBookPage {
 		landing.click();
 	}
 	
-	public void view_Ticket() throws Throwable{
+	public void view_Btickets() throws Throwable{
+		Thread.sleep(10000);
+		//Assert.assertTrue(driver.getTitle().contains("My Account"));
 		Assert.assertTrue(driver.getTitle().contains("Invoice"));	
 	}
 }

@@ -52,7 +52,7 @@ public class LandingPageStep extends DriverFactory {
 		new LandingPage(driver).client_searchs_for_the_hotel();
 	}
 
-	@Then("^User goes to my account$")
+	@And("^User goes to my account$")
 	public void myaccount() throws Throwable{
 		new LandingPage(driver).click_To_UserLogin();
 	}

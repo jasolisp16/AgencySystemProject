@@ -2,12 +2,13 @@ package steps;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
 import pages.UserConfirmBookPage;
 import utils.DriverFactory;
 
 public class UserConfirmBookStep extends DriverFactory {
 	
-	@Then("^User confirms booking$")
+	@When("^User confirms booking$")
 	public void confirm() throws Throwable{
 		new UserConfirmBookPage(driver).confirmbook();
 	}
@@ -17,7 +18,7 @@ public class UserConfirmBookStep extends DriverFactory {
 		new UserConfirmBookPage(driver).cupon_inCode();
 	}
 	
-	@And("^User applies validcupon$")
+	@And("^User applies valid cupon$")
 	public void apply_Cupon()throws Throwable{
 		new UserConfirmBookPage(driver).cupon_Code();
 	}
